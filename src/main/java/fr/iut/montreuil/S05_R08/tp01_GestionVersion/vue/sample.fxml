@@ -1211,7 +1211,7 @@
                         </ImageView>
                         <VBox prefHeight="177.0" prefWidth="618.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="105.0" prefWidth="886.0" text="Tales of a Blind World" textFill="#d38b0d">
+                              <Label alignment="CENTER" prefHeight="105.0" prefWidth="886.0" text="Tales of a Ortografe World" textFill="#d38b0d">
                                  <font>
                                     <Font size="43.0" />
                                  </font>

@@ -2,8 +2,8 @@ package fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.quetes;
 
 public class KillQuete extends Quete{
 
-    private String ennemyToKill;
-    private int nbKills;
+    private final String ennemyToKill;
+    private final int nbKills;
     private int count;
 
 

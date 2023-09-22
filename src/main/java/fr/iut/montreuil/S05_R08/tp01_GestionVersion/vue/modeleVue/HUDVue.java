@@ -11,11 +11,11 @@ import javafx.util.Duration;
 
 
 public class HUDVue {
-    private Label arme;
-    private Label range;
-    private Label atk;
-    private Label armeDistance;
-    private Joueur j1;
+    private final Label arme;
+    private final Label range;
+    private final Label atk;
+    private final Label armeDistance;
+    private final Joueur j1;
     public HUDVue(Label arme, Label range, Label attaque, Label armeDistance, Joueur joueur){
         this.arme=arme;
         this.range=range;

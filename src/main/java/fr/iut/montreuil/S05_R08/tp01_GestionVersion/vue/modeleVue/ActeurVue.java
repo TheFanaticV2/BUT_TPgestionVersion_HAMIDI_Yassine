@@ -9,8 +9,8 @@ import javafx.scene.layout.Pane;
 
 public class ActeurVue {
 
-    private ImageMap imageMap = new ImageMap();
-    private Pane pane;
+    private final ImageMap imageMap = new ImageMap();
+    private final Pane pane;
 
     public ActeurVue(Pane pane){
         this.pane = pane;

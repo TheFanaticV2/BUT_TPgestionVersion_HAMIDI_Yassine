@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ConsoleVue {
-    private TextArea console;
+    private final TextArea console;
     private static String star = "**";
 
     public ConsoleVue(TextArea console){

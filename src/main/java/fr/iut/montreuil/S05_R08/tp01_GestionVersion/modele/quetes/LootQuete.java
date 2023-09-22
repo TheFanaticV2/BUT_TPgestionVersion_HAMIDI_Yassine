@@ -2,9 +2,9 @@ package fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.quetes;
 
 public class LootQuete extends Quete{
 
-    private String ressourceToGet;
+    private final String ressourceToGet;
     private int count;
-    private int nbRessource;
+    private final int nbRessource;
 
     public LootQuete(String titre, String description, int recompenseOr, String recompenseObjet, int quantiteObjet, String ressource, int quantite) {
         super(titre, description, recompenseOr, recompenseObjet, quantiteObjet);

@@ -8,13 +8,13 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.items.Objets.Objet;
 
 public class Quete {
 
-    private String description;
-    private String titre;
+    private final String description;
+    private final String titre;
     private String typeQuete;
     private static int idQuete;
-    private int recompenseOr;
-    private String recompenseObjet;
-    private int quantiteObjet;
+    private final int recompenseOr;
+    private final String recompenseObjet;
+    private final int quantiteObjet;
 
     public Quete(String titre, String description, int recompenseOr, String recompenseObjet, int quantiteObjet){
         idQuete++;

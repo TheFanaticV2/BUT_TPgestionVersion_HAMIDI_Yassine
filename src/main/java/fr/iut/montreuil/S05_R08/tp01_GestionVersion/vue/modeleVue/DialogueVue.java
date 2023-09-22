@@ -7,9 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 public class DialogueVue {
-    private Label label;
-    private Pane pane;
-    private Joueur joueur;
+    private final Label label;
+    private final Pane pane;
+    private final Joueur joueur;
     public static long tempsDebutDialogue;
     public DialogueVue(Label label, Pane pane, Joueur joueur){
         this.label=label;
@@ -28,10 +28,7 @@ public class DialogueVue {
 
     public void afficherDialogue(Acteur a){
         //partie visibilité
-        if(this.pane.isVisible())
-            this.pane.setVisible(false);
-        else
-            this.pane.setVisible(true);
+        this.pane.setVisible(!this.pane.isVisible());
         //partie set text
 
         if (!joueur.getListeQuetes().getQueteActuelle().getTitre().startsWith("Felicitation")) {

@@ -11,7 +11,7 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.vue.modeleVue.ProjectilesVue
 
 public class ObsListProjectiles implements ListChangeListener<Projectile> {
 
-    private ProjectilesVue projectilesVue;
+    private final ProjectilesVue projectilesVue;
 
     public ObsListProjectiles (Pane gamePane){
         this.projectilesVue = new ProjectilesVue(gamePane);

@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 public class Objet {
 
-    private IntegerProperty quantite = new SimpleIntegerProperty();
+    private final IntegerProperty quantite = new SimpleIntegerProperty();
     private int valeur;
     private String nom;
     private String description;

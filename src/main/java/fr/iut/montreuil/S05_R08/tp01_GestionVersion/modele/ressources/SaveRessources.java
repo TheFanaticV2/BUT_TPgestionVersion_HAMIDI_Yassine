@@ -16,7 +16,7 @@ public class SaveRessources {
 
     // PERMET DE SAUVEGARDER LES RESSOURCES D'UNE MAP
 
-    private Map<Integer, ObservableList<Ressource>> saveListesRessources = new HashMap<>();
+    private final Map<Integer, ObservableList<Ressource>> saveListesRessources = new HashMap<>();
 
     public SaveRessources(){
         genererSaveZone0();

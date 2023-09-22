@@ -6,9 +6,9 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 public class Ressource {
 
-    private IntegerProperty x = new SimpleIntegerProperty();
-    private IntegerProperty y = new SimpleIntegerProperty();
-    private String id;
+    private final IntegerProperty x = new SimpleIntegerProperty();
+    private final IntegerProperty y = new SimpleIntegerProperty();
+    private final String id;
     private static int e;
     private String recompense;
     private int quantite;
