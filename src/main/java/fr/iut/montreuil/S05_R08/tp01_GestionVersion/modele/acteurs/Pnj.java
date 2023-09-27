@@ -127,9 +127,10 @@ public class Pnj extends Acteur {
                 lines.add("Il a oublié son chapeau! Ya! ");
                 break;
             case "panneau":
-                lines.add("Trésor très précieux, ne pas toucher");
+                lines.add("Garde la pêche");
+                /*lines.add("Trésor très précieux, ne pas toucher");
                 lines.add("Dur dur la vie de panneau...");
-                lines.add("Le 'Une pièce'... Il existe!");
+                lines.add("Le 'Une pièce'... Il existe!");*/
                 break;
             case "épouvantail":
                 lines.add("*Vous frappez l'épouvantail*\nPourquoi faites vous cela ?");
