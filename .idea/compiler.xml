@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TP_GESTION_VERSIONS_HAMIDI_YassinetalesOfABlindWorldGOTY" />
         <module name="talesOfABlindWorldGOTY" />
+        <module name="BUT_TPgestionVersion_HAMIDI_Yassine" />
       </profile>
     </annotationProcessing>
   </component>
