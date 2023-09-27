@@ -4,16 +4,16 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
 public class Projectile {
-    private IntegerProperty x= new SimpleIntegerProperty(0);
-    private IntegerProperty y= new SimpleIntegerProperty(0);
-    private String direction;
-    private String origine;
-    private String id;
+    private final IntegerProperty x= new SimpleIntegerProperty(0);
+    private final IntegerProperty y= new SimpleIntegerProperty(0);
+    private final String direction;
+    private final String origine;
+    private final String id;
     private static int b=0;
-    private int vitesse;
+    private final int vitesse;
 
 
-    private int tailleProjectile;
+    private final int tailleProjectile;
 
     public Projectile(int x, int y, String direction, String id, String origine, int taille, int vitesse){
         this.id = id+b;

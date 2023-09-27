@@ -6,10 +6,10 @@ import javafx.scene.text.Text;
 
 public class QueteVue {
 
-    private Label questTitle;
-    private Label or;
-    private Label objet;
-    private Text text;
+    private final Label questTitle;
+    private final Label or;
+    private final Label objet;
+    private final Text text;
 
     public QueteVue(Label questTitle, Text questDescription, Label recompenseOr, Label recompenseObjet) {
         this.questTitle = questTitle;

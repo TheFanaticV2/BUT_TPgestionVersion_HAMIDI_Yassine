@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class InventaireTest {
-    private Inventaire inventaire = new Inventaire();
+    private final Inventaire inventaire = new Inventaire();
 
     @Test
     void testEstDisponible() {

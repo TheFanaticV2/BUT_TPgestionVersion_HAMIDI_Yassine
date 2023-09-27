@@ -6,7 +6,7 @@ import javafx.collections.ListChangeListener;
 
 public class ObsListQuetes implements ListChangeListener<Quete> {
 
-    private QueteVue queteVue;
+    private final QueteVue queteVue;
 
     public ObsListQuetes(QueteVue queteVue){
         this.queteVue = queteVue;

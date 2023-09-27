@@ -4,7 +4,7 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.Projectile;
 import fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.Terrain;
 
 public class BossFightManager {
-    private Terrain terrain;
+    private final Terrain terrain;
 
     public BossFightManager(Terrain terrain){
         this.terrain = terrain;

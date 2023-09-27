@@ -15,9 +15,9 @@ import javafx.scene.layout.Pane;
 
 public class ListenerLauncher {
 
-    private Joueur joueur;
-    private ImageView player;
-    private TerrainVue terrainVue;
+    private final Joueur joueur;
+    private final ImageView player;
+    private final TerrainVue terrainVue;
     private String inventoryClicEventMemory = "";
 
     public ListenerLauncher(Joueur joueur, ImageView player, TerrainVue terrainVue){

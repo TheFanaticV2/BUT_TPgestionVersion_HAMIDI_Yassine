@@ -16,7 +16,7 @@ public class SaveActeurs {
     -> PERMET DE NE PAS LES PERDRE EN CHANGEANT DE MAP
      */
 
-    private Map<Integer, ObservableList<Acteur>> savesListesActeurs = new HashMap<>();
+    private final Map<Integer, ObservableList<Acteur>> savesListesActeurs = new HashMap<>();
 
     public Map<Integer, ObservableList<Acteur>> getSavesListesActeurs() {
         return savesListesActeurs;

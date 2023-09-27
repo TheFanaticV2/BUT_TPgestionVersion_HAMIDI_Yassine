@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Pnj extends Acteur {
 
     private String nom;
-    private ArrayList<String> repliques;
-    private ArrayList<String> repliquesFinDuJeu;
+    private final ArrayList<String> repliques;
+    private final ArrayList<String> repliquesFinDuJeu;
     private static int numReplique = 0;
     public Pnj(int x, int y, String n){
         super(x, y);

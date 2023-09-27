@@ -26,16 +26,16 @@ public class TerrainVue {
     PERMET DE CHARGER LA MAP ET LES TEXTURES
      */
 
-    private Terrain zoneActuelle;
-    private Joueur joueur;
-    private MapLoader mapLoader = new MapLoader();
-    private ImageMap imageMap = new ImageMap();
+    private final Terrain zoneActuelle;
+    private final Joueur joueur;
+    private final MapLoader mapLoader = new MapLoader();
+    private final ImageMap imageMap = new ImageMap();
 
-    private Pane gamePane;
+    private final Pane gamePane;
 
-    private TilePane tilePane;
-    private TilePane tilePaneDeco;
-    private TilePane tilePaneSolid;
+    private final TilePane tilePane;
+    private final TilePane tilePaneDeco;
+    private final TilePane tilePaneSolid;
     public TerrainVue(Terrain zoneActuelle, Joueur joueur, Pane gamePane, TilePane tilePane, TilePane tilePaneDeco, TilePane tilePaneSolid){
         this.zoneActuelle = zoneActuelle;
         this.joueur = joueur;
@@ -148,8 +148,8 @@ public class TerrainVue {
     
     public void affichageDeMap(String numero) throws IOException {
         System.out.println("affichageDeMap");
-        int floor[][] = mapLoader.LoadTileMap("map"+numero+"/Map"+numero+"Floor");
-        int deco[][] = mapLoader.LoadTileMap("map"+numero+"/Map"+numero+"Décoration");
+        int[][] floor = mapLoader.LoadTileMap("map"+numero+"/Map"+numero+"Floor");
+        int[][] deco = mapLoader.LoadTileMap("map"+numero+"/Map"+numero+"Décoration");
         updateTilePaneSize(tilePane, tilePaneDeco, tilePaneSolid, gamePane);
         // affiche chacune des couches
         chargerTextures(floor,tilePane);
@@ -173,7 +173,7 @@ public class TerrainVue {
    			}
     	}
        else {
-    	   System.out.println("TileSet existante : "+ tileSet.toString());
+    	   System.out.println("TileSet existante : "+ tileSet);
        }
 		
         tilepane.getChildren().clear();
@@ -220,10 +220,7 @@ public class TerrainVue {
         for (int i=gamePane.getChildren().size()-1;i>=0;i--) {
             Node nuage = gamePane.getChildren().get(i);
             if(nuage.getId().startsWith("nuage")){
-                if(zoneActuelle.getNumeroCarte()==0||zoneActuelle.getNumeroCarte()==6)
-                    nuage.setVisible(false);
-                else
-                    nuage.setVisible(true);
+                nuage.setVisible(zoneActuelle.getNumeroCarte() != 0 && zoneActuelle.getNumeroCarte() != 6);
                 nuage.setLayoutX(nuage.getLayoutX()+1);
                 if(Math.random()>=0.9) nuage.setLayoutY(nuage.getLayoutY()+1);
                 if(nuage.getLayoutX()>=zoneActuelle.limiteHorizMap()*12 || nuage.getLayoutY()>=zoneActuelle.limiteVertiMap()*12 ) {

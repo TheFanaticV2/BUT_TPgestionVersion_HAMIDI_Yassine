@@ -11,8 +11,8 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.vue.modeleVue.RessourceVue;
 
 public class ObsListRessources implements ListChangeListener<Ressource> {
 
-    private RessourceVue ressourceVue;
-    private Joueur joueur;
+    private final RessourceVue ressourceVue;
+    private final Joueur joueur;
 
     public ObsListRessources(Pane p, Joueur j){
         joueur = j;
