@@ -16,7 +16,8 @@ public class QuestLine {
     public QuestLine(Joueur j){
         joueur = j;
         quetes = FXCollections.observableArrayList();
-        quetes.add(new TalkQuete("Chapitre 0 - Que veut le prof ?", "Que dois je faire ? On va jouer pendant tout le cours ?", 10, "Potion", 1, "spectre"));
+        quetes.add(new TalkQuete("Chapitre 0 - Que veut le prof ?", "Que dois je faire ? On va jouer pendant tout le cours ?", 10, "Potion", 1, "panneau"));
+
         quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "Si vous voulez jouer, il faudra d'abord suivre le TP.\n Si vous arrivez au bout, il faudra être le 1er à push le code pour obtenir le bonus ultime !!!!\n Serez vous de taille ?", 5, "Commit", 1, "vendeur"));
         quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "'Salut à toi héros ici tu trouveras tout ce qu'il te faut, va voir le forgeron pour acheter des armes ou traiter tes minerais'\nAller parler au forgeron au sud de la ville.", 5, "Miel", 1, "upgrader"));
         quetes.add(new LootQuete("Chapitre 1 - C'est parti pour le TP", "'Si tu veux acheter du nouveau matos c'est ici que ça se passe ! Tiens d'ailleurs, rend moi un service tu veux.'\nMiner une source de minerai à l'est.", 10, "Fer", 1, "SourceMinerai", 1));
