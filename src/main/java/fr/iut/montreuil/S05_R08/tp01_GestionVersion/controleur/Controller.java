@@ -292,7 +292,8 @@ public class Controller implements Initializable {
         }
         else if(e.getCode()== KeyCode.DIGIT2 || e.getCode()==KeyCode.UNDEFINED) {
             joueur.manger("Potion");
-            joueur.setHp(5);
+
+            joueur.setHp(10);
         }
         else if(e.getCode()==KeyCode.B)
             hudVue.statMenuManager(menuStatInterface);
