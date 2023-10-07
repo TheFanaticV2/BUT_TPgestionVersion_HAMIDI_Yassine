@@ -24,7 +24,7 @@ public abstract class Ennemi extends Acteur {
     public Ennemi(int x, int y, int pv, int pointDegat, int niveau){
         super(x, y);
         this.pv = pv;
-        this.vitesse = 2;
+        this.vitesse = 1;
         this.pointDegat = pointDegat;
         this.niveau = niveau;
         this.moveDirection = 5;
