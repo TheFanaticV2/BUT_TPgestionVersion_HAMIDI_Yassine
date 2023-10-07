@@ -16,19 +16,20 @@ import javafx.scene.input.KeyEvent;
 
 public class Joueur {
 
-    private IntegerProperty hp = new SimpleIntegerProperty();
+    private final IntegerProperty hp = new SimpleIntegerProperty();
     private Arme arme;
     private ArmeDistance armeDistance;
     private Console console;
-    private IntegerProperty xProperty = new SimpleIntegerProperty(0);
-    private IntegerProperty yProperty = new SimpleIntegerProperty(0);
-    private static int vitesseDeDeplacement = 2 ;
-    private StringProperty direction = new SimpleStringProperty();
+    private final IntegerProperty xProperty = new SimpleIntegerProperty(0);
+    private final IntegerProperty yProperty = new SimpleIntegerProperty(0);
+    private static final int vitesseDeDeplacement = 2 ;
+    private final StringProperty direction = new SimpleStringProperty();
     private Terrain zone;
-    private Inventaire inventaire;
-    private IntegerProperty maxHP = new SimpleIntegerProperty();
-    private IntegerProperty niveau;
+    private final Inventaire inventaire;
+    private final IntegerProperty maxHP = new SimpleIntegerProperty();
+    private final IntegerProperty niveau;
     private QuestLine listeQuetes;
+    private int pas;
 
     public Joueur(int x, int y, Terrain zone) {
         arme = new Gourdin(); // Le joueur commence avec un gourdin
@@ -42,6 +43,7 @@ public class Joueur {
         niveau = new SimpleIntegerProperty(1);
         this.inventaire = new Inventaire();
         this.listeQuetes = new QuestLine(this);
+        this.pas = 0;
     }
 
     public ArmeDistance getArmeDistance() {
@@ -121,6 +123,10 @@ public class Joueur {
         return this.yProperty.getValue();
     }
 
+    public int getPas() {
+        return pas;
+    }
+
     public void setXProperty(int newX) {
         this.xProperty.setValue(newX);
     }
@@ -142,21 +148,35 @@ public class Joueur {
     public void moveUp () {
         this.yProperty.setValue(this.yProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("up");
+        this.pas++;
+        System.out.println(pas + "pas");
     }
 
     public void moveDown () {
         this.yProperty.setValue(this.yProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("down");
+        this.pas++;
+        System.out.println(pas + "pas");
+
+
     }
 
     public void moveRight () {
         this.xProperty.setValue(this.xProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("right");
+        this.pas++;
+        System.out.println(pas + "pas");
+
+
     }
 
     public void moveLeft () {
         this.xProperty.setValue(this.xProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("left");
+        this.pas++;
+        System.out.println(pas + "pas");
+
+
     }
 
     public QuestLine getListeQuetes() {
@@ -316,7 +336,7 @@ public class Joueur {
             case "meatRadio":
                 if (getInventaire().estDisponible("Viande", 1)) {
                     getInventaire().eneleverObjet("Viande", 1);
-                    regenerer((int)(maxHP.getValue()/2));
+                    regenerer(maxHP.getValue()/2);
                     SoundPlayer.playSpecificSound("eating.wav");
                 }
                 else console.afficherItemIndisponible("viande");
@@ -324,7 +344,7 @@ public class Joueur {
             case "Potion":
                 if (getInventaire().estDisponible("Potion", 1)) {
                     getInventaire().eneleverObjet("Potion", 1);
-                    regenerer((int)(maxHP.getValue()));
+                    regenerer(maxHP.getValue());
                     SoundPlayer.playSpecificSound("potion.wav");
                 }
                 else console.afficherItemIndisponible("potion");

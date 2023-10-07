@@ -17,9 +17,9 @@ public class Terrain {
 
     private String nomDeCarte;
     private int [][] mapObstacles; // MAP DES OBSTACLES ET COLLISIONS
-    private SaveActeurs saveActeurs = new SaveActeurs();
-    private ObservableList<Projectile> projectiles = FXCollections.observableArrayList();
-    private SaveRessources saveRessources = new SaveRessources();
+    private final SaveActeurs saveActeurs = new SaveActeurs();
+    private final ObservableList<Projectile> projectiles = FXCollections.observableArrayList();
+    private final SaveRessources saveRessources = new SaveRessources();
     private int[][] mapSpawn; // ZONE DE SPAWN DES ENNEMIS
     private Console console;
 

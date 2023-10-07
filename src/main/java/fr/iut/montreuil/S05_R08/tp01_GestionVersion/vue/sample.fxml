@@ -1193,7 +1193,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="27.0" layoutY="408.0" prefHeight="39.0" prefWidth="846.0" text="ISSA Anthony | NAZICAL David | SASIRAJAH Sashtiga" textFill="#f8f2c5">
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="408.0" prefHeight="39.0" prefWidth="846.0" text="ISSA Anthony | NAZICAL David | SASIRAJAH Sashtiga |Yass" textFill="#f8f2c5">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -1211,7 +1211,7 @@
                         </ImageView>
                         <VBox prefHeight="177.0" prefWidth="618.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="105.0" prefWidth="886.0" text="Tales of a Blind World" textFill="#d38b0d">
+                              <Label alignment="CENTER" prefHeight="105.0" prefWidth="886.0" text="Tales of a Ortografe World" textFill="#d38b0d">
                                  <font>
                                     <Font size="43.0" />
                                  </font>
@@ -1227,7 +1227,7 @@
                                     <Insets top="-40.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="43.0" prefWidth="898.0" text="A creation of DAS Company - Maven Edition Hacked By J.Marcinkowski" textFill="#c39d60">
+                              <Label alignment="CENTER" prefHeight="43.0" prefWidth="898.0" text="A creation of EZ Production - Maven Edition Hacked By J.Marcinkowski" textFill="#c39d60">
                                  <font>
                                     <Font size="17.0" />
                                  </font>

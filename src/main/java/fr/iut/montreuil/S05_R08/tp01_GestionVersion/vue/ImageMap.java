@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class ImageMap {
 
-    private Map<String, Image> map = new HashMap<>();
+    private final Map<String, Image> map = new HashMap<>();
 
     public ImageMap(){
     	
@@ -50,7 +50,7 @@ public class ImageMap {
 	        map.put("playerUP", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/player/playerUP.png").toURI().toURL().toString()));
 	        map.put("playerRIGHT", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/player/playerRIGHT.png").toURI().toURL().toString()));
 	        map.put("playerLEFT", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/player/playerLEFT.png").toURI().toURL().toString()));
-	
+
 	        map.put("SourceBois", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/ressourcesImg/bois.png").toURI().toURL().toString()));
 	        map.put("SourceTresor", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/ressourcesImg/coffre.png").toURI().toURL().toString()));
 	        map.put("SourceMinerai", new Image(new File("src/main/java/fr/iut/montreuil/S05_R08/tp01_GestionVersion/ressources/ressourcesImg/minerai.png").toURI().toURL().toString()));

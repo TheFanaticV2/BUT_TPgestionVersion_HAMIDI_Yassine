@@ -11,7 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class RessourceVue {
-    private Pane gamePane;
+    private final Pane gamePane;
 
   
 

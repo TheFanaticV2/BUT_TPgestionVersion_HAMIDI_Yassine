@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Pnj extends Acteur {
 
     private String nom;
-    private ArrayList<String> repliques;
-    private ArrayList<String> repliquesFinDuJeu;
+    private final ArrayList<String> repliques;
+    private final ArrayList<String> repliquesFinDuJeu;
     private static int numReplique = 0;
     public Pnj(int x, int y, String n){
         super(x, y);
@@ -71,8 +71,8 @@ public class Pnj extends Acteur {
                 lines.add("Maître m'a parlé de vous, vous êtes à la recherche de réponses ?");
                 break;
             case "spectre":
-            	lines.add("Je pense que si on respect la qualite du dev, comme nos étudiants de 1ere année de DUT de 2021, on peut produire de très beaux projets, comme celui ci !");
-            	lines.add("Je pense que si on respect la qualite du dev, comme nos étudiants de 1ere année de DUT de 2021, on peut produire de très beaux projets, comme celui ci !");
+            	lines.add("Pour changer de niveau, vous devez :• Soit faire 5.000 pas • Soit consommer une publicité\"");
+            	lines.add("Pour changer de niveau, vous devez :• Soit faire 5.000 pas • Soit consommer une publicité\"");
                 lines.add("Vous savez...ce jeu réalisé en 2 mois est très bien fait. Par exemple j ai plusieurs répliques, vous devriez insister un peu...");
                 lines.add("Vous savez...ce jeu réalisé en 2 mois est très bien fait. Par exemple j ai plusieurs répliques, vous devriez insister un peu...");
                 lines.add("Oh non ! Ce jeu qui semble si bien, a été corrompu par un professeur aigri, il dit que vous ne lisiez pas ses mails l'année passée. Vous devez corriger le code mais seulement apres avoir fait le TP correctement et tout push sur git...");
@@ -127,9 +127,10 @@ public class Pnj extends Acteur {
                 lines.add("Il a oublié son chapeau! Ya! ");
                 break;
             case "panneau":
-                lines.add("Trésor très précieux, ne pas toucher");
+                lines.add("Garde la pêche");
+                /*lines.add("Trésor très précieux, ne pas toucher");
                 lines.add("Dur dur la vie de panneau...");
-                lines.add("Le 'Une pièce'... Il existe!");
+                lines.add("Le 'Une pièce'... Il existe!");*/
                 break;
             case "épouvantail":
                 lines.add("*Vous frappez l'épouvantail*\nPourquoi faites vous cela ?");

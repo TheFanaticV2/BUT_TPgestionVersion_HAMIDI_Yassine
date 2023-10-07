@@ -37,7 +37,7 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.vue.modeleVue.*;
 public class Controller implements Initializable {
 
     ImageMap imageMap = new ImageMap();
-    private static CooldownManager  cdManager = new CooldownManager();
+    private static final CooldownManager  cdManager = new CooldownManager();
 
     private ItemDescriptionSwitcher itemsDescriptionLoader;
     private ArmeDescriptionSwitcher armeDescriptionSwitcher;
@@ -46,10 +46,10 @@ public class Controller implements Initializable {
     private static int dx = 0;
     private static int dy = 0;
 
-    private static Terrain zoneActuelle = new Terrain("zone");
-    private static Joueur joueur = new Joueur(0, 0, zoneActuelle);
-    private BossFightManager bossFightManager = new BossFightManager(zoneActuelle);
-    private ShopInventory shopInventory = new ShopInventory();
+    private static final Terrain zoneActuelle = new Terrain("zone");
+    private static final Joueur joueur = new Joueur(0, 0, zoneActuelle);
+    private final BossFightManager bossFightManager = new BossFightManager(zoneActuelle);
+    private final ShopInventory shopInventory = new ShopInventory();
     //PANES
     @FXML
     private Pane gamePane;
@@ -344,7 +344,7 @@ public class Controller implements Initializable {
            joueur.manger(radioSelected.getId());
        }catch (Exception e) {
            joueur.getConsole().afficherErreurConsommable();
-       };
+       }
     }
 
     @FXML
@@ -416,7 +416,7 @@ public class Controller implements Initializable {
         try {
             Arme armechoisie = shopInventory.chercherArme(radioSelected.getId());
             joueur.acheterArme(armechoisie);
-        }catch (Exception e) { joueur.getConsole().afficherErreurArmeNotSelected(); };
+        }catch (Exception e) { joueur.getConsole().afficherErreurArmeNotSelected(); }
     }
     private static void parlerAvecActeur(){
         for(Acteur a : joueur.getZone().getListeActeurs()){

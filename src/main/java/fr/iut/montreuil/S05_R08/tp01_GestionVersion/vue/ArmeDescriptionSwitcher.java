@@ -4,7 +4,7 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.items.Armes.ShopInven
 import javafx.scene.control.Label;
 
 public class ArmeDescriptionSwitcher {
-    private Label armeDescription;
+    private final Label armeDescription;
     public ArmeDescriptionSwitcher(Label armeDescription){
         this.armeDescription=armeDescription;
     }

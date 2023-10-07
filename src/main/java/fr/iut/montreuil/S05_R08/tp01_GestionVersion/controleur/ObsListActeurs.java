@@ -14,10 +14,10 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.vue.modeleVue.ActeurVue;
 
 public class ObsListActeurs implements ListChangeListener<Acteur> {
 
-    private Pane pane;
-    private ImageMap imageMap = new ImageMap();
-    private ActeurVue acteurVue;
-    private Joueur joueur;
+    private final Pane pane;
+    private final ImageMap imageMap = new ImageMap();
+    private final ActeurVue acteurVue;
+    private final Joueur joueur;
 
     public ObsListActeurs(Pane p, Joueur j){
         joueur = j;

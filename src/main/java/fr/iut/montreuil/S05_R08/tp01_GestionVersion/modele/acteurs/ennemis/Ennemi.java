@@ -16,15 +16,15 @@ public abstract class Ennemi extends Acteur {
     private int vitesse;
     private int niveau;
     private int moveDirection; //1 pour down; 2 pour up; 3 pour right; 4 pour left; 5 pour none
-    private BFS bfs = new BFS();
-    private int largeur;
+    private final BFS bfs = new BFS();
+    private final int largeur;
 
     private Stack<Integer> path = new Stack<Integer>(); // direction à prendre pour rejoindre le joueur (BFS PATHFINDING)
 
     public Ennemi(int x, int y, int pv, int pointDegat, int niveau){
         super(x, y);
         this.pv = pv;
-        this.vitesse = 2;
+        this.vitesse = 1;
         this.pointDegat = pointDegat;
         this.niveau = niveau;
         this.moveDirection = 5;
@@ -115,25 +115,18 @@ public abstract class Ennemi extends Acteur {
     //verifie si l'ennemi peut se deplacer
     public boolean verifieDeplacement(int [][] mapObstacle){
         if  (moveDirection == 1) {
-            if (((getY()+16)/16<mapObstacle.length) && (mapObstacle[(getCentreActeurY()+8)/16][getCentreActeurX()/16]== -1) )
-                return true;
+            return ((getY() + 16) / 16 < mapObstacle.length) && (mapObstacle[(getCentreActeurY() + 8) / 16][getCentreActeurX() / 16] == -1);
         }
         else if  (moveDirection == 2) {
-            if ((getY()/16>0) && (mapObstacle[(getCentreActeurY() - 8)/16][getCentreActeurX()/16] == -1))
-                return true;
+            return (getY() / 16 > 0) && (mapObstacle[(getCentreActeurY() - 8) / 16][getCentreActeurX() / 16] == -1);
         }
         else if (moveDirection == 3) {
-            if (((getX()+16)/16<mapObstacle[0].length) && (mapObstacle[getCentreActeurY()/16][(getCentreActeurX() + 8)/16] == -1))
-                return true;
+            return ((getX() + 16) / 16 < mapObstacle[0].length) && (mapObstacle[getCentreActeurY() / 16][(getCentreActeurX() + 8) / 16] == -1);
         }
         else if (moveDirection == 4){
-           if ((getX()/16>0) && (mapObstacle[getCentreActeurY()/16][(getCentreActeurX()-8)/16]== -1))
-            return true;
+            return (getX() / 16 > 0) && (mapObstacle[getCentreActeurY() / 16][(getCentreActeurX() - 8) / 16] == -1);
         }
-        else if (moveDirection == 5){
-            return true;
-        }
-        return false;
+        else return moveDirection == 5;
     }
 
     public int getVitesse() {

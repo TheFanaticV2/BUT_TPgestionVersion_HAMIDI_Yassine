@@ -6,8 +6,9 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 public class Acteur {
 
-    private IntegerProperty x, y;
-    private String id;
+    private final IntegerProperty x;
+    private final IntegerProperty y;
+    private final String id;
     private static int a = 0;
 
     public Acteur(int x, int y) {

@@ -10,9 +10,9 @@ import fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.items.Objets.*;
 
 public class Inventaire {
 
-    private ArrayList<Objet> listObjet;
-    private IntegerProperty nbrOr = new SimpleIntegerProperty();
-    private IntegerProperty quantiteGlobale = new SimpleIntegerProperty();
+    private final ArrayList<Objet> listObjet;
+    private final IntegerProperty nbrOr = new SimpleIntegerProperty();
+    private final IntegerProperty quantiteGlobale = new SimpleIntegerProperty();
 
     public Inventaire(){
         this.listObjet = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Inventaire {
         listObjet.add(new Nouilles());
         listObjet.add(new Potion());
         listObjet.add(new Viande());
-        this.nbrOr.setValue(100);
+        this.nbrOr.setValue(5);
     }
 
     public void ajouterObjet(String item, int quantite) {

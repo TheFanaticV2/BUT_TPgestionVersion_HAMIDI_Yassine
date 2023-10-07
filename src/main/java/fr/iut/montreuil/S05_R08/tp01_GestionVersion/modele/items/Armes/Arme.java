@@ -1,11 +1,11 @@
 package fr.iut.montreuil.S05_R08.tp01_GestionVersion.modele.items.Armes;
 
 public class Arme {
-    private int degatsArme;
-    private String nom;
-    private int range;
-    private String description;
-    private int value;
+    private final int degatsArme;
+    private final String nom;
+    private final int range;
+    private final String description;
+    private final int value;
 
     public Arme (String name, int degat, int range,int value){
         this.nom = name;
